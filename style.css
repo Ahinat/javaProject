@@ -1,0 +1,45 @@
+.menubar:hover{
+    -fx-border-color: #5c1259;
+    -fx-border-width: 0px 0px 3px 0px;
+}
+
+.menubarLabel{
+    -fx-text-fill: #96168b;
+}
+
+.menubar:hover .menubarLabel{
+    -fx-font-size: 13px;
+}
+
+.primaryOptionLayer{
+    -fx-background-color: #ffccfd;
+}
+
+.secondaryOptionLayer{
+    -fx-background-color: #fbb2ff;
+}
+
+.menuItem:hover{
+    -fx-border-color: #5c1259;
+    -fx-border-width: 0px 0px 0px 3px;
+}
+
+.menuButton{
+    -fx-background-color: transparent;
+    -fx-background-radius: 10px;
+}
+
+.menuButton:hover{
+    -fx-background-color: #ede4ed;
+}
+
+.dashboardMenuItem: hover{
+    -fx-border-color: #5c1259;
+    -fx-border-width: 0px 0px 0px 3px;
+}
+
+.profilePrimaryOptions: hover{
+    -fx-border-color: #5c1259;
+    -fx-border-radius: 15px;
+    -fx-border-width: 2px;
+}
