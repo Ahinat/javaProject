@@ -1,0 +1,1035 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="689.0" prefWidth="1000.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.realestatemanagementsystem.dashboardController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane prefHeight="689.0" prefWidth="200.0" style="-fx-background-color: #f9e3fa;">
+               <children>
+                  <Pane layoutX="14.0" layoutY="89.0" onMouseClicked="#onDashboardOptionClicked" prefHeight="41.0" prefWidth="170.0" style="-fx-background-radius: 10px;" styleClass="dashboardOption">
+                     <children>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="14.0" layoutY="8.0" opacity="0.0" pickOnBounds="true" preserveRatio="true" styleClass="dashboardActiveIcon">
+                           <image>
+                              <Image url="@../../../images/dashboard%20active%20icon.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="14.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" styleClass="dashboardIcon">
+                           <image>
+                              <Image url="@../../../images/dashboard%20icon.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="45.0" layoutY="8.0" styleClass="dashboardLabel" text="Dashboard" textFill="#541f53">
+                           <font>
+                              <Font name="Eras Demi ITC" size="17.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Pane>
+                  <Pane layoutY="14.0" prefHeight="52.0" prefWidth="195.0">
+                     <children>
+                        <Label layoutX="46.0" layoutY="13.0" onMouseClicked="#onLogoClicked" prefHeight="22.0" prefWidth="141.0" text="Your Property" textFill="#5c1259">
+                           <font>
+                              <Font name="Arial Black" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Label>
+                        <ImageView fitHeight="32.0" fitWidth="25.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#onLogoClicked" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/your%20property%20logo.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="14.0" layoutY="130.0" prefHeight="41.0" prefWidth="170.0" style="-fx-background-radius: 10px;" styleClass="dashboardOption">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="6.0" opacity="0.0" pickOnBounds="true" preserveRatio="true" styleClass="dashboardActiveIcon">
+                           <image>
+                              <Image url="@../../../images/my%20properties%20active%20icon.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" styleClass="dashboardIcon">
+                           <image>
+                              <Image url="@../../../images/my%20property%20icon.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="48.0" layoutY="10.0" styleClass="dashboardLabel" text="My properties" textFill="#541f53">
+                           <font>
+                              <Font name="Eras Demi ITC" size="17.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Pane>
+                  <Pane layoutX="15.0" layoutY="178.0" prefHeight="41.0" prefWidth="170.0" style="-fx-background-radius: 10px;" styleClass="dashboardOption">
+                     <children>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="10.0" layoutY="8.0" opacity="0.0" pickOnBounds="true" preserveRatio="true" styleClass="dashboardActiveIcon">
+                           <image>
+                              <Image url="@../../../images/saved%20properties%20active%20icon.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="10.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" styleClass="dashboardIcon">
+                           <image>
+                              <Image url="@../../../images/saved%20properties%20icon.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="41.0" layoutY="10.0" styleClass="dashboardLabel" text="Saved property" textFill="#541f53">
+                           <font>
+                              <Font name="Eras Demi ITC" size="17.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Pane>
+                  <Button fx:id="logOutButton" layoutX="42.0" layoutY="638.0" mnemonicParsing="false" onAction="#onLogOutClicked" style="-fx-background-color: #571d4f; -fx-background-radius: 10px;" text="Log Out" textFill="#ffeafe">
+                     <font>
+                        <Font name="Franklin Gothic Demi" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button layoutX="124.0" layoutY="637.0" mnemonicParsing="false" onAction="#onProfileSettingsClicked" style="-fx-background-color: #571d4f; -fx-background-radius: 10px;">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/profile%20settings.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <ImageView fx:id="profilePicture" fitHeight="52.0" fitWidth="55.0" layoutX="72.0" layoutY="508.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/user.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="userName" alignment="CENTER" layoutX="19.0" layoutY="573.0" prefHeight="21.0" prefWidth="158.0" text="Your Name" textFill="#541f53" wrapText="true">
+                     <font>
+                        <Font name="Yu Gothic Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="userEmail" alignment="CENTER" layoutX="16.0" layoutY="594.0" prefHeight="31.0" prefWidth="164.0" text="Your Email" textFill="#832694" wrapText="true">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="200.0">
+               <children>
+                  <AnchorPane fx:id="dashboardLayer" prefHeight="689.0" prefWidth="800.0" style="-fx-background-color: white;">
+                     <children>
+                        <Pane layoutX="17.0" layoutY="6.0" prefWidth="766.0" style="-fx-background-color: #541f53; -fx-background-radius: 8px;">
+                           <children>
+                              <Pane layoutX="3.0" prefHeight="40.0" prefWidth="760.0" style="-fx-background-color: #d6c6d7; -fx-background-radius: 8;">
+                                 <children>
+                                    <Label layoutX="34.0" layoutY="8.0" text="Dashboard" textFill="#7c1f7b">
+                                       <font>
+                                          <Font name="Eras Demi ITC" size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="83.0" layoutY="71.0" prefHeight="111.0" style="-fx-background-color: #541f53; -fx-background-radius: 10px;">
+                           <children>
+                              <Pane layoutY="-2.0" prefHeight="110.0" prefWidth="170.0" style="-fx-background-color: #f9e3fa; -fx-background-radius: 10px;">
+                                 <children>
+                                    <Label layoutX="45.0" layoutY="24.0" text="Number" textFill="#93299a">
+                                       <font>
+                                          <Font name="System Bold Italic" size="21.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="46.0" layoutY="63.0" text="PROPERTIES" textFill="#825e86">
+                                       <font>
+                                          <Font name="Arial Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="315.0" layoutY="71.0" prefHeight="111.0" style="-fx-background-color: #541f53; -fx-background-radius: 10px;">
+                           <children>
+                              <Pane layoutY="-2.0" prefHeight="110.0" prefWidth="170.0" style="-fx-background-color: #f9e3fa; -fx-background-radius: 10px;">
+                                 <children>
+                                    <Label layoutX="45.0" layoutY="24.0" text="Number" textFill="#93299a">
+                                       <font>
+                                          <Font name="System Bold Italic" size="21.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="60.0" layoutY="63.0" text="AGENTS" textFill="#825e86">
+                                       <font>
+                                          <Font name="Arial Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="535.0" layoutY="71.0" prefHeight="111.0" style="-fx-background-color: #541f53; -fx-background-radius: 10px;">
+                           <children>
+                              <Pane layoutY="-2.0" prefHeight="110.0" prefWidth="170.0" style="-fx-background-color: #f9e3fa; -fx-background-radius: 10px;">
+                                 <children>
+                                    <Label layoutX="45.0" layoutY="24.0" text="Number" textFill="#93299a">
+                                       <font>
+                                          <Font name="System Bold Italic" size="21.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="43.0" layoutY="63.0" text="Est. REVENUE" textFill="#825e86">
+                                       <font>
+                                          <Font name="Arial Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+                  <ScrollPane fx:id="profileSettingsLayer" prefHeight="689.0" prefWidth="800.0" visible="false">
+                     <content>
+                        <AnchorPane prefHeight="950.0" prefWidth="800.0" style="-fx-background-color: white;">
+                           <children>
+                              <Pane layoutX="17.0" layoutY="6.0" prefWidth="766.0" style="-fx-background-color: #541f53; -fx-background-radius: 8px;">
+                                 <children>
+                                    <Pane layoutX="3.0" prefHeight="40.0" prefWidth="760.0" style="-fx-background-color: #d6c6d7; -fx-background-radius: 8;">
+                                       <children>
+                                          <Label layoutX="34.0" layoutY="8.0" text="Profile Settings" textFill="#7c1f7b">
+                                             <font>
+                                                <Font name="Eras Demi ITC" size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </Pane>
+                              <Label layoutX="26.0" layoutY="85.0" text="Profile Details" textFill="#b038b9">
+                                 <font>
+                                    <Font name="Book Antiqua Bold Italic" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Pane layoutX="24.0" layoutY="121.0" prefHeight="287.0" prefWidth="750.0" style="-fx-background-color: #ece3ee; -fx-background-radius: 20px;">
+                                 <children>
+                                    <Pane layoutX="14.0" layoutY="40.0" prefHeight="110.0" prefWidth="110.0" style="-fx-background-color: white; -fx-background-radius: 10px;">
+                                       <children>
+                                          <ImageView fx:id="profilePictureInProfileDetails" fitHeight="100.0" fitWidth="100.0" layoutX="5.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../images/user.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </Pane>
+                                    <Label fx:id="userNameInProfileDetails" layoutX="26.0" layoutY="172.0" text="Your Name" textFill="#541f53">
+                                       <font>
+                                          <Font name="Yu Gothic Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="userEmailInProfileDetails" alignment="CENTER" layoutX="3.0" layoutY="196.0" prefHeight="41.0" prefWidth="164.0" text="Your Email" textFill="#832694" wrapText="true">
+                                       <font>
+                                          <Font name="Tahoma" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="21.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../images/facebook%20icon.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="60.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../images/google%20icon.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="95.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../images/twitter%20icon.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="148.0" layoutY="23.0" text="First Name" textFill="#a839a8">
+                                       <font>
+                                          <Font name="Cambria Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane layoutX="148.0" layoutY="44.0" prefHeight="27.0" prefWidth="122.0" style="-fx-background-color: #ddcce1; -fx-background-radius: 5px;">
+                                       <children>
+                                          <Label fx:id="firstName" layoutX="11.0" layoutY="5.0" text="First name" textFill="#896e90" />
+                                       </children>
+                                    </Pane>
+                                    <Label layoutX="148.0" layoutY="83.0" text="Last Name" textFill="#a839a8">
+                                       <font>
+                                          <Font name="Cambria Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane layoutX="148.0" layoutY="103.0" prefHeight="27.0" prefWidth="122.0" style="-fx-background-color: #ddcce1; -fx-background-radius: 5px;">
+                                       <children>
+                                          <Label fx:id="lastName" layoutX="11.0" layoutY="5.0" text="Last name" textFill="#896e90" />
+                                       </children>
+                                    </Pane>
+                                    <Label layoutX="148.0" layoutY="146.0" text="Date of birth" textFill="#a839a8">
+                                       <font>
+                                          <Font name="Cambria Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane layoutX="148.0" layoutY="169.0" prefHeight="27.0" prefWidth="122.0" style="-fx-background-color: #ddcce1; -fx-background-radius: 5px;">
+                                       <children>
+                                          <Label fx:id="birthday" layoutX="11.0" layoutY="5.0" text="dd/mm/yyyy" textFill="#896e90" />
+                                       </children>
+                                    </Pane>
+                                    <Label layoutX="333.0" layoutY="23.0" text="Gender" textFill="#a839a8">
+                                       <font>
+                                          <Font name="Cambria Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane layoutX="333.0" layoutY="44.0" prefHeight="27.0" prefWidth="122.0" style="-fx-background-color: #ddcce1; -fx-background-radius: 5px;">
+                                       <children>
+                                          <Label fx:id="gender" layoutX="11.0" layoutY="5.0" text="Gender" textFill="#896e90" />
+                                       </children>
+                                    </Pane>
+                                    <Label layoutX="333.0" layoutY="83.0" text="Password" textFill="#a839a8">
+                                       <font>
+                                          <Font name="Cambria Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane layoutX="333.0" layoutY="103.0" prefHeight="27.0" prefWidth="122.0" style="-fx-background-color: #ddcce1; -fx-background-radius: 5px;">
+                                       <children>
+                                          <Label fx:id="password" layoutX="11.0" layoutY="5.0" onMouseClicked="#onPasswordInProfileSettingsClicked" text="Password" textFill="#896e90" />
+                                       </children>
+                                    </Pane>
+                                    <Label layoutX="333.0" layoutY="146.0" text="Mobile Number" textFill="#a839a8">
+                                       <font>
+                                          <Font name="Cambria Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane layoutX="333.0" layoutY="169.0" prefHeight="27.0" prefWidth="122.0" style="-fx-background-color: #ddcce1; -fx-background-radius: 5px;">
+                                       <children>
+                                          <Label fx:id="mobileNumber" layoutX="11.0" layoutY="5.0" text="Mobile number" textFill="#896e90" />
+                                       </children>
+                                    </Pane>
+                                    <Label layoutX="520.0" layoutY="23.0" text="Security Question" textFill="#a839a8">
+                                       <font>
+                                          <Font name="Cambria Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane layoutX="520.0" layoutY="44.0" prefHeight="27.0" prefWidth="183.0" style="-fx-background-color: #ddcce1; -fx-background-radius: 5px;">
+                                       <children>
+                                          <Label fx:id="securityQuestion" layoutX="11.0" layoutY="5.0" text="Security question" textFill="#896e90" />
+                                       </children>
+                                    </Pane>
+                                    <Label layoutX="520.0" layoutY="83.0" text="Security Answer" textFill="#a839a8">
+                                       <font>
+                                          <Font name="Cambria Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane layoutX="520.0" layoutY="103.0" prefHeight="27.0" prefWidth="183.0" style="-fx-background-color: #ddcce1; -fx-background-radius: 5px;">
+                                       <children>
+                                          <Label fx:id="securityAnswer" layoutX="11.0" layoutY="5.0" text="Security answer" textFill="#896e90" />
+                                       </children>
+                                    </Pane>
+                                    <Label layoutX="520.0" layoutY="146.0" text="Bio" textFill="#a839a8">
+                                       <font>
+                                          <Font name="Cambria Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane layoutX="520.0" layoutY="169.0" prefHeight="78.0" prefWidth="208.0" style="-fx-background-color: #ddcce1; -fx-background-radius: 5px;">
+                                       <children>
+                                          <Label fx:id="bio" alignment="TOP_LEFT" layoutX="11.0" layoutY="5.0" prefHeight="68.0" prefWidth="187.0" text="About yourself" textFill="#896e90" wrapText="true" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </Pane>
+                              <Label layoutX="26.0" layoutY="444.0" text="Update Details" textFill="#b038b9">
+                                 <font>
+                                    <Font name="Book Antiqua Bold Italic" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Pane layoutX="25.0" layoutY="482.0" prefHeight="403.0" prefWidth="750.0" style="-fx-background-color: #ece3ee; -fx-background-radius: 20px;">
+                                 <children>
+                                    <Label layoutX="20.0" layoutY="23.0" text="First Name" textFill="#a839a8">
+                                       <font>
+                                          <Font name="Cambria Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="20.0" layoutY="83.0" text="Last Name" textFill="#a839a8">
+                                       <font>
+                                          <Font name="Cambria Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="20.0" layoutY="146.0" text="Date of birth" textFill="#a839a8">
+                                       <font>
+                                          <Font name="Cambria Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="254.0" layoutY="23.0" text="Gender" textFill="#a839a8">
+                                       <font>
+                                          <Font name="Cambria Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="254.0" layoutY="83.0" text="Password" textFill="#a839a8">
+                                       <font>
+                                          <Font name="Cambria Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="20.0" layoutY="207.0" text="Mobile Number" textFill="#a839a8">
+                                       <font>
+                                          <Font name="Cambria Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="520.0" layoutY="23.0" text="Security Question" textFill="#a839a8">
+                                       <font>
+                                          <Font name="Cambria Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="520.0" layoutY="83.0" text="Security Answer" textFill="#a839a8">
+                                       <font>
+                                          <Font name="Cambria Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="520.0" layoutY="146.0" text="Bio" textFill="#a839a8">
+                                       <font>
+                                          <Font name="Cambria Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="newFirstName" layoutX="20.0" layoutY="45.0" promptText="Enter First Name" />
+                                    <TextField fx:id="newLastName" layoutX="20.0" layoutY="104.0" promptText="Enter Last Name" />
+                                    <DatePicker fx:id="newBirthday" editable="false" layoutX="20.0" layoutY="166.0" promptText="mm/dd/yyyy" />
+                                    <RadioButton fx:id="newMaleSelected" layoutX="254.0" layoutY="49.0" mnemonicParsing="false" onAction="#onNewMaleSelected" text="Male" />
+                                    <RadioButton fx:id="newFemaleSelected" layoutX="316.0" layoutY="49.0" mnemonicParsing="false" onAction="#onNewFemaleSelected" text="Female" />
+                                    <RadioButton fx:id="newOtherSelected" layoutX="393.0" layoutY="49.0" mnemonicParsing="false" onAction="#onNewOtherSelected" text="Other" />
+                                    <TextField fx:id="newPassword" layoutX="254.0" layoutY="104.0" promptText="Enter new password" />
+                                    <ComboBox fx:id="newCountryCode" layoutX="20.0" layoutY="225.0" prefHeight="25.0" prefWidth="71.0" promptText="+880">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ComboBox>
+                                    <TextField fx:id="newMobileNumber" layoutX="94.0" layoutY="225.0" prefHeight="25.0" prefWidth="122.0" />
+                                    <ComboBox fx:id="newSecurityQuestionBox" editable="true" layoutX="520.0" layoutY="45.0" onAction="#addCustomSecurityQuestion" prefHeight="25.0" prefWidth="220.0" promptText="Select your new security question">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </ComboBox>
+                                    <TextField fx:id="newSecurityAnswer" layoutX="520.0" layoutY="104.0" prefHeight="25.0" prefWidth="184.0" promptText="Enter your new security answer" />
+                                    <TextArea fx:id="newBio" layoutX="520.0" layoutY="164.0" prefHeight="85.0" prefWidth="212.0" promptText="Enter your new bio" />
+                                    <Label layoutX="20.0" layoutY="264.0" text="Facebook profile link" textFill="#a839a8">
+                                       <font>
+                                          <Font name="Cambria Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="254.0" layoutY="146.0" text="Confirm Password" textFill="#a839a8">
+                                       <font>
+                                          <Font name="Cambria Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="reEnteredNewPassword" layoutX="254.0" layoutY="163.0" promptText="Re-enter new password" />
+                                    <Label layoutX="254.0" layoutY="207.0" text="Email" textFill="#a839a8">
+                                       <font>
+                                          <Font name="Cambria Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="newEmail" layoutX="254.0" layoutY="225.0" promptText="Enter new email" />
+                                    <Label layoutX="254.0" layoutY="264.0" text="Google account link" textFill="#a839a8">
+                                       <font>
+                                          <Font name="Cambria Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="520.0" layoutY="264.0" text="Twitter profile link" textFill="#a839a8">
+                                       <font>
+                                          <Font name="Cambria Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="newFacebookLink" layoutX="20.0" layoutY="282.0" prefHeight="25.0" prefWidth="200.0" promptText="Enter link" />
+                                    <TextField fx:id="newGoogleLink" layoutX="254.0" layoutY="282.0" prefHeight="25.0" prefWidth="200.0" promptText="Enter link" />
+                                    <TextField fx:id="newTwitterLink" layoutX="520.0" layoutY="282.0" prefHeight="25.0" prefWidth="200.0" promptText="Enter link" />
+                                    <Label layoutX="20.0" layoutY="325.0" text="Update profile picture" textFill="#a839a8">
+                                       <font>
+                                          <Font name="Cambria Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane layoutX="20.0" layoutY="344.0" prefHeight="41.0" prefWidth="242.0" style="-fx-background-color: white; -fx-background-radius: 3px;">
+                                       <children>
+                                          <Button fx:id="selectImageButton" layoutX="14.0" layoutY="7.0" mnemonicParsing="false" onAction="#chooseProfilePicture" prefWidth="77.0" style="-fx-background-color: thansparent; -fx-border-color: black;" text="Choose file" />
+                                          <Label fx:id="chosenFilePath" layoutX="96.0" layoutY="12.0" prefHeight="14.0" prefWidth="132.0" text="No file chosen" textFill="#978997">
+                                             <font>
+                                                <Font name="Constantia" size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                    <Button layoutX="313.0" layoutY="352.0" mnemonicParsing="false" onAction="#onUpdateDetailsClicked" style="-fx-background-color: #662b6f; -fx-background-radius: 5px;" text="Update details" textFill="#fdf0ff">
+                                       <font>
+                                          <Font name="Franklin Gothic Demi" size="14.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </Pane>
+                              <Button layoutX="192.0" layoutY="907.0" mnemonicParsing="false" onAction="#onDeleteAccountClicked" prefHeight="29.0" prefWidth="130.0" style="-fx-background-color: #570d5e; -fx-background-radius: 10px;" text="Delete Account" textFill="#fde9ff">
+                                 <font>
+                                    <Font name="Bell MT Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="26.0" layoutY="907.0" mnemonicParsing="false" onAction="#onManageProfileClicked" prefHeight="29.0" prefWidth="158.0" style="-fx-background-color: #a27aa8; -fx-background-radius: 10px;" styleClass="editButton" text="Manage Your Profiles" textFill="#fce9ff">
+                                 <font>
+                                    <Font name="Bell MT Bold" size="14.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+                  <AnchorPane fx:id="manageProfile" prefHeight="689.0" prefWidth="800.0" style="-fx-background-color: white;" visible="false">
+                     <children>
+                        <Pane layoutX="17.0" layoutY="8.0" prefWidth="766.0" style="-fx-background-color: #541f53; -fx-background-radius: 8px;">
+                           <children>
+                              <Pane layoutX="3.0" prefHeight="40.0" prefWidth="760.0" style="-fx-background-color: #d6c6d7; -fx-background-radius: 8;">
+                                 <children>
+                                    <Label layoutX="34.0" layoutY="8.0" text="Manage Profile" textFill="#7c1f7b">
+                                       <font>
+                                          <Font name="Eras Demi ITC" size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="17.0" layoutY="59.0" onMouseClicked="#onManageBuyerProfileOptionClicked" prefHeight="31.0" prefWidth="76.0" style="-fx-background-radius: 10px;" styleClass="dashboardOption">
+                           <children>
+                              <Label layoutX="20.0" layoutY="7.0" styleClass="dashboardLabel" text="Buyer" textFill="#6b256b">
+                                 <font>
+                                    <Font name="Britannic Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="104.0" layoutY="59.0" onMouseClicked="#onManageRenterProfileOptionClicked" prefHeight="31.0" prefWidth="76.0" style="-fx-background-radius: 10px;" styleClass="dashboardOption">
+                           <children>
+                              <Label layoutX="20.0" layoutY="7.0" styleClass="dashboardLabel" text="Renter" textFill="#6b256b">
+                                 <font>
+                                    <Font name="Britannic Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="180.0" layoutY="59.0" onMouseClicked="#onManageSellerProfileOptionClicked" prefHeight="31.0" prefWidth="76.0" style="-fx-background-radius: 10px;" styleClass="dashboardOption">
+                           <children>
+                              <Label layoutX="20.0" layoutY="7.0" styleClass="dashboardLabel" text="Seller" textFill="#6b256b">
+                                 <font>
+                                    <Font name="Britannic Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="256.0" layoutY="59.0" prefHeight="31.0" prefWidth="76.0" style="-fx-background-radius: 10px;" styleClass="dashboardOption">
+                           <children>
+                              <Label layoutX="20.0" layoutY="7.0" styleClass="dashboardLabel" text="Agent" textFill="#6b256b">
+                                 <font>
+                                    <Font name="Britannic Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Separator layoutX="17.0" layoutY="97.0" prefHeight="0.0" prefWidth="766.0" />
+                        <AnchorPane fx:id="manageBuyerProfile" layoutY="100.0" prefHeight="589.0" prefWidth="800.0" style="-fx-background-color: white;">
+                           <children>
+                              <AnchorPane fx:id="createBuyerProfile" layoutX="17.0" layoutY="14.0" prefHeight="575.0" prefWidth="766.0">
+                                 <children>
+                                    <Button layoutX="24.0" layoutY="50.0" mnemonicParsing="false" onAction="#onCreateNewBuyerProfileClicked" style="-fx-background-color: #571d4f; -fx-background-radius: 8px;" text="Create Buyer Profile" textFill="#ffeafe">
+                                       <font>
+                                          <Font name="Franklin Gothic Demi" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Label layoutX="24.0" layoutY="23.0" text="You don't have a buyer profile yet." textFill="#aa4dab">
+                                       <font>
+                                          <Font name="Dubai Regular" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="createBuyerProfileFields" layoutX="17.0" layoutY="14.0" prefHeight="575.0" prefWidth="766.0" style="-fx-background-color: #fff7ff; -fx-background-radius: 30px;" translateY="575.0" visible="false">
+                                 <children>
+                                    <Label layoutX="43.0" layoutY="31.0" text="Enter your budget range" textFill="#bf3dbd">
+                                       <font>
+                                          <Font name="Garamond" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="buyerMinimumBudget" layoutX="43.0" layoutY="52.0" prefHeight="25.0" prefWidth="111.0" promptText="Minimum Budget" />
+                                    <TextField fx:id="buyerMaximumBudget" layoutX="158.0" layoutY="52.0" prefHeight="25.0" prefWidth="111.0" promptText="Maximum Budget" />
+                                    <Label layoutX="43.0" layoutY="91.0" text="Select your preferred property" textFill="#bf3dbd">
+                                       <font>
+                                          <Font name="Garamond" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <CheckBox fx:id="buyerProfileApartmentChecked" layoutX="43.0" layoutY="119.0" mnemonicParsing="false" text="Apartments" textFill="#691f6b" />
+                                    <CheckBox fx:id="buyerProfileHousesChecked" layoutX="186.0" layoutY="119.0" mnemonicParsing="false" text="Houses" textFill="#691f6b" />
+                                    <CheckBox fx:id="buyerProfileLandsChecked" layoutX="337.0" layoutY="119.0" mnemonicParsing="false" text="Lands" textFill="#691f6b" />
+                                    <CheckBox fx:id="buyerProfileResidentialUnitsChecked" layoutX="43.0" layoutY="157.0" mnemonicParsing="false" text="Residential units" textFill="#691f6b" />
+                                    <CheckBox fx:id="buyerProfileCommercialUnitsChecked" layoutX="186.0" layoutY="157.0" mnemonicParsing="false" text="Commercial units" textFill="#691f6b" />
+                                    <CheckBox fx:id="buyerProfileBusinessPlacesChecked" layoutX="337.0" layoutY="157.0" mnemonicParsing="false" text="Business places" textFill="#691f6b" />
+                                    <Label layoutX="45.0" layoutY="197.0" text="Enter your preferred location" textFill="#bf3dbd">
+                                       <font>
+                                          <Font name="Garamond" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="buyerPreferredLocationField" layoutX="43.0" layoutY="222.0" promptText="Location" />
+                                    <Button layoutX="204.0" layoutY="221.0" mnemonicParsing="false" onAction="#onBuyerAddPreferredLocationClicked" style="-fx-background-color: #571d4f; -fx-background-radius: 8px;" text="Add location" textFill="#ffeafe">
+                                       <font>
+                                          <Font name="Garamond Bold" size="13.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <FlowPane fx:id="buyerPreferredLocationFlowPane" hgap="10.0" layoutX="45.0" layoutY="258.0" prefHeight="79.0" prefWidth="400.0" vgap="10.0" />
+                                    <Button layoutX="45.0" layoutY="424.0" mnemonicParsing="false" onAction="#onCreateBuyerProfileClicked" prefHeight="31.0" prefWidth="77.0" style="-fx-background-color: #571d4f; -fx-background-radius: 10px;" text="Create" textFill="#ffeafe">
+                                       <font>
+                                          <Font name="Franklin Gothic Demi" size="14.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <HBox alignment="CENTER" layoutX="663.0" layoutY="27.0" onMouseClicked="#onCancelCreateBuyerClicked" prefHeight="31.0" prefWidth="89.0" spacing="5.0">
+                                       <children>
+                                          <Label text="Cancel" textFill="#ac44b2">
+                                             <font>
+                                                <Font name="Georgia Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../images/cross.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </HBox>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="manageRenterProfile" layoutY="100.0" prefHeight="589.0" prefWidth="800.0" style="-fx-background-color: white;" visible="false">
+                           <children>
+                              <AnchorPane fx:id="createRenterProfile" layoutX="17.0" layoutY="14.0" prefHeight="575.0" prefWidth="766.0">
+                                 <children>
+                                    <Button layoutX="24.0" layoutY="50.0" mnemonicParsing="false" onAction="#onCreateNewRenterProfileClicked" style="-fx-background-color: #571d4f; -fx-background-radius: 8px;" text="Create Renter Profile" textFill="#ffeafe">
+                                       <font>
+                                          <Font name="Franklin Gothic Demi" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Label layoutX="24.0" layoutY="23.0" text="You don't have a renter profile yet." textFill="#aa4dab">
+                                       <font>
+                                          <Font name="Dubai Regular" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <ScrollPane fx:id="createRenterProfileFields" layoutX="17.0" layoutY="14.0" style="-fx-background-color: white; -fx-background-radius: 30px; -fx-border-radius: 30px;" translateY="577.0" visible="false">
+                                 <content>
+                                    <AnchorPane prefHeight="575.0" prefWidth="766.0" style="-fx-background-color: #fff7ff; -fx-background-radius: 30px;">
+                                       <children>
+                                          <Label layoutX="43.0" layoutY="88.0" text="Enter/Select your preferred move-in date" textFill="#bf3dbd">
+                                             <font>
+                                                <Font name="Garamond" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <DatePicker fx:id="renterPreferredMoveInDate" layoutX="43.0" layoutY="109.0" promptText="mm/dd/yyyy" />
+                                          <Label layoutX="43.0" layoutY="148.0" text="Select your preferred rental term" textFill="#bf3dbd">
+                                             <font>
+                                                <Font name="Garamond" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox fx:id="preferredRentalTermComboBox" layoutX="43.0" layoutY="168.0" prefWidth="150.0" promptText="Rental term" />
+                                          <Label layoutX="43.0" layoutY="31.0" text="Enter your budget range" textFill="#bf3dbd">
+                                             <font>
+                                                <Font name="Garamond" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="renterMinimumBudget" layoutX="43.0" layoutY="52.0" prefHeight="25.0" prefWidth="111.0" promptText="Minimum Budget" />
+                                          <TextField fx:id="renterMaximumBudget" layoutX="158.0" layoutY="52.0" prefHeight="25.0" prefWidth="111.0" promptText="Maximum Budget" />
+                                          <HBox alignment="CENTER" layoutX="663.0" layoutY="27.0" onMouseClicked="#onCancelCreateRenterClicked" prefHeight="31.0" prefWidth="89.0" spacing="5.0">
+                                             <children>
+                                                <Label text="Cancel" textFill="#ac44b2">
+                                                   <font>
+                                                      <Font name="Georgia Bold" size="13.0" />
+                                                   </font>
+                                                </Label>
+                                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../../images/cross.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </HBox>
+                                          <Pane fx:id="selectPreferredProperty" layoutX="43.0" layoutY="212.0">
+                                             <children>
+                                                <Label text="Select your preferred property" textFill="#bf3dbd">
+                                                   <font>
+                                                      <Font name="Garamond" size="14.0" />
+                                                   </font>
+                                                </Label>
+                                                <CheckBox fx:id="renterProfileApartmentChecked" layoutY="28.0" mnemonicParsing="false" onMouseClicked="#showPreferredFeatures" text="Apartments" textFill="#691f6b" />
+                                                <CheckBox fx:id="renterProfileHousesChecked" layoutX="143.0" layoutY="28.0" mnemonicParsing="false" onMouseClicked="#showPreferredFeatures" text="Houses" textFill="#691f6b" />
+                                                <CheckBox fx:id="renterProfileLandsChecked" layoutX="294.0" layoutY="28.0" mnemonicParsing="false" onMouseClicked="#showPreferredFeatures" text="Lands" textFill="#691f6b" />
+                                                <CheckBox fx:id="renterProfileResidentialUnitsChecked" layoutY="66.0" mnemonicParsing="false" onMouseClicked="#showPreferredFeatures" text="Residential units" textFill="#691f6b" />
+                                                <CheckBox fx:id="renterProfileCommercialUnitsChecked" layoutX="143.0" layoutY="66.0" mnemonicParsing="false" onMouseClicked="#showPreferredFeatures" text="Commercial units" textFill="#691f6b" />
+                                                <CheckBox fx:id="renterProfileBusinessPlacesChecked" layoutX="294.0" layoutY="66.0" mnemonicParsing="false" onMouseClicked="#showPreferredFeatures" text="Business places" textFill="#691f6b" />
+                                             </children>
+                                          </Pane>
+                                          <VBox fx:id="showPreferredFeaturesVbox" layoutX="44.0" layoutY="310.0">
+                                             <children>
+                                                <Pane fx:id="apartmentFeatures" prefHeight="256.0" prefWidth="402.0" visible="false">
+                                                   <children>
+                                                      <Label layoutY="36.0" text="Choose your pet policy" textFill="#bf3dbd">
+                                                         <font>
+                                                            <Font name="Garamond" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <RadioButton fx:id="PetPolicyYes" layoutY="59.0" mnemonicParsing="false" text="Yes" />
+                                                      <RadioButton fx:id="PetPolicyNo" layoutX="67.0" layoutY="59.0" mnemonicParsing="false" text="No" />
+                                                      <Label layoutY="95.0" text="Choose your furnished preferrence" textFill="#bf3dbd">
+                                                         <font>
+                                                            <Font name="Garamond" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <RadioButton fx:id="furnishedPolicyYes" layoutY="118.0" mnemonicParsing="false" text="Furnished" />
+                                                      <RadioButton fx:id="furnishedPolicyNo" layoutX="90.0" layoutY="118.0" mnemonicParsing="false" text="Unfurnished" />
+                                                      <Label layoutY="145.0" text="Choose your terrace preferrence" textFill="#bf3dbd">
+                                                         <font>
+                                                            <Font name="Garamond" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <RadioButton fx:id="terraceAvailabilityYes" layoutY="169.0" mnemonicParsing="false" text="Yes" />
+                                                      <RadioButton fx:id="terraceAvailabilityNo" layoutX="71.0" layoutY="169.0" mnemonicParsing="false" text="No" />
+                                                      <Label layoutY="198.0" text="Choose your parking availability preferrence" textFill="#bf3dbd">
+                                                         <font>
+                                                            <Font name="Garamond" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <RadioButton fx:id="parkingAvailabilityYes" layoutY="224.0" mnemonicParsing="false" text="Covered" />
+                                                      <RadioButton fx:id="parkingAvailabilityNo" layoutX="89.0" layoutY="224.0" mnemonicParsing="false" text="Uncovered" />
+                                                      <Label layoutY="8.0" text="Preferred features for apartment" textFill="#ad52b2">
+                                                         <font>
+                                                            <Font name="Garamond Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </Pane>
+                                                <Pane fx:id="houseFeatures" prefHeight="185.0" prefWidth="402.0" visible="false">
+                                                   <children>
+                                                      <Label layoutY="32.0" text="Choose your basement preferrence" textFill="#bf3dbd">
+                                                         <font>
+                                                            <Font name="Garamond" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <RadioButton fx:id="basementPreferenceYes" layoutY="54.0" mnemonicParsing="false" text="Finished" />
+                                                      <RadioButton fx:id="basementPreferrenceNo" layoutX="90.0" layoutY="54.0" mnemonicParsing="false" text="Unfinished" />
+                                                      <Label layoutY="77.0" text="Select your preferred security features" textFill="#bf3dbd">
+                                                         <font>
+                                                            <Font name="Garamond" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <CheckBox fx:id="SecuritySystem" layoutY="101.0" mnemonicParsing="false" text="Security Sytem" />
+                                                      <CheckBox fx:id="GatedEntry" layoutX="131.0" layoutY="101.0" mnemonicParsing="false" text="Gated Entry" />
+                                                      <CheckBox fx:id="Cameras" layoutX="244.0" layoutY="101.0" mnemonicParsing="false" text="Cameras" />
+                                                      <Label layoutY="131.0" text="Choose your garage preferrence" textFill="#bf3dbd">
+                                                         <font>
+                                                            <Font name="Garamond" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <RadioButton fx:id="garagePreferenceYes" layoutY="156.0" mnemonicParsing="false" text="Yes" />
+                                                      <RadioButton fx:id="garagePreferrenceNo" layoutX="92.0" layoutY="156.0" mnemonicParsing="false" text="No" />
+                                                      <Label layoutY="6.0" text="Preferred features for house" textFill="#ad52b2">
+                                                         <font>
+                                                            <Font name="Garamond Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </Pane>
+                                                <Pane fx:id="landFeatures" prefHeight="206.0" prefWidth="402.0" visible="false">
+                                                   <children>
+                                                      <Label layoutY="38.0" text="Choose your preferred topography" textFill="#bf3dbd">
+                                                         <font>
+                                                            <Font name="Garamond" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <RadioButton fx:id="flatLand" layoutY="62.0" mnemonicParsing="false" text="Flat" />
+                                                      <RadioButton fx:id="hillyLand" layoutX="78.0" layoutY="62.0" mnemonicParsing="false" text="Hilly" />
+                                                      <RadioButton fx:id="slopedLand" layoutX="157.0" layoutY="62.0" mnemonicParsing="false" text="Sloped" />
+                                                      <Label layoutY="89.0" text="Select your required utilities" textFill="#bf3dbd">
+                                                         <font>
+                                                            <Font name="Garamond" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <CheckBox fx:id="electricityUtilityLand" layoutY="114.0" mnemonicParsing="false" text="Electricity" />
+                                                      <CheckBox fx:id="waterUtilityLand" layoutX="113.0" layoutY="114.0" mnemonicParsing="false" text="Water" />
+                                                      <CheckBox fx:id="sewageUtilityLand" layoutX="209.0" layoutY="114.0" mnemonicParsing="false" text="Sewage" />
+                                                      <Label layoutY="148.0" text="Choose your preferred road accesss" textFill="#bf3dbd">
+                                                         <font>
+                                                            <Font name="Garamond" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <RadioButton fx:id="pavedRoadAccessLand" layoutY="174.0" mnemonicParsing="false" text="Paved" />
+                                                      <RadioButton fx:id="unpavedRoadAccessLand" layoutX="87.0" layoutY="174.0" mnemonicParsing="false" text="Unpaved" />
+                                                      <Label layoutY="10.0" text="Preferred features for land" textFill="#ad52b2">
+                                                         <font>
+                                                            <Font name="Garamond Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </Pane>
+                                                <Pane fx:id="residentialUnitFeatures" prefHeight="209.0" prefWidth="402.0" visible="false">
+                                                   <children>
+                                                      <Label layoutY="14.0" text="Preferred features for residential unit" textFill="#ad52b2">
+                                                         <font>
+                                                            <Font name="Garamond Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutY="41.0" text="Select your preferrred amenities" textFill="#bf3dbd">
+                                                         <font>
+                                                            <Font name="Garamond" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <CheckBox fx:id="poolAmenitiyResidentialUnit" layoutY="67.0" mnemonicParsing="false" text="Pool" />
+                                                      <CheckBox fx:id="gymAmenityResidentialUnit" layoutX="85.0" layoutY="67.0" mnemonicParsing="false" text="Gym" />
+                                                      <CheckBox fx:id="playgroundAmenityResidentialUnit" layoutX="170.0" layoutY="67.0" mnemonicParsing="false" text="Kid's playground" />
+                                                      <Label layoutY="94.0" text="Choose your preferred storage space" textFill="#bf3dbd">
+                                                         <font>
+                                                            <Font name="Garamond" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <RadioButton fx:id="closetStorageResidentialUnit" layoutX="1.0" layoutY="118.0" mnemonicParsing="false" text="Closet" />
+                                                      <RadioButton fx:id="basementStorageResidentialUnit" layoutX="87.0" layoutY="118.0" mnemonicParsing="false" text="Basement" />
+                                                      <RadioButton fx:id="builtInStorageResidentialUnit" layoutX="193.0" layoutY="118.0" mnemonicParsing="false" text="Built-in" />
+                                                      <Label layoutY="149.0" text="Choose your noise insulation preferrence" textFill="#bf3dbd">
+                                                         <font>
+                                                            <Font name="Garamond" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <RadioButton fx:id="noiseInsulatedResidentialUnit" layoutX="1.0" layoutY="173.0" mnemonicParsing="false" text="Insulated" />
+                                                      <RadioButton fx:id="noiseExposeResidentialUnit" layoutX="108.0" layoutY="173.0" mnemonicParsing="false" text="Exposed" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane fx:id="commercialUnitFeatures" prefHeight="206.0" prefWidth="402.0" visible="false">
+                                                   <children>
+                                                      <Label layoutY="14.0" text="Preferred features for commercial unit" textFill="#ad52b2">
+                                                         <font>
+                                                            <Font name="Garamond Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutY="38.0" text="Select your commercial purpose" textFill="#bf3dbd">
+                                                         <font>
+                                                            <Font name="Garamond" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <CheckBox fx:id="retailPurposeCommercialUnit" layoutY="62.0" mnemonicParsing="false" text="Retail" />
+                                                      <CheckBox fx:id="officePurposeCommercialUnit" layoutX="76.0" layoutY="62.0" mnemonicParsing="false" text="Office" />
+                                                      <CheckBox fx:id="medicalPurposeCommercialUnit" layoutX="153.0" layoutY="62.0" mnemonicParsing="false" text="Medical" />
+                                                      <CheckBox fx:id="restaurantPurposeCommercialUnit" layoutX="238.0" layoutY="62.0" mnemonicParsing="false" text="Restaurant" />
+                                                      <Label layoutX="1.0" layoutY="92.0" text="Choose your preferred floor layout" textFill="#bf3dbd">
+                                                         <font>
+                                                            <Font name="Garamond" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <RadioButton fx:id="openPlanFloorLayoutCommercialUnit" layoutY="117.0" mnemonicParsing="false" text="Open-plan" />
+                                                      <RadioButton fx:id="modularFloorLayoutCommercialUnit" layoutX="102.0" layoutY="117.0" mnemonicParsing="false" text="Modular" />
+                                                      <RadioButton fx:id="separateFloorLayoutCommercialUnit" layoutX="201.0" layoutY="117.0" mnemonicParsing="false" text="Separate" />
+                                                      <Label layoutY="146.0" text="Select your preferred accessibility features" textFill="#bf3dbd">
+                                                         <font>
+                                                            <Font name="Garamond" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <CheckBox fx:id="elevatorCommercialUnit" layoutY="172.0" mnemonicParsing="false" text="Elevator" />
+                                                      <CheckBox fx:id="brailleSignageCommercialUnit" layoutX="96.0" layoutY="172.0" mnemonicParsing="false" text="Braille Signage" />
+                                                      <CheckBox fx:id="accessibleWashroomCommercialUnit" layoutX="238.0" layoutY="172.0" mnemonicParsing="false" text="Accessible washrooms" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane fx:id="businessPlacesFeatures" prefHeight="200.0" prefWidth="200.0" visible="false">
+                                                   <children>
+                                                      <Label layoutY="14.0" text="Preferred features for business places" textFill="#ad52b2">
+                                                         <font>
+                                                            <Font name="Garamond Bold" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutY="40.0" text="Select your business purpose" textFill="#bf3dbd">
+                                                         <font>
+                                                            <Font name="Garamond" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <CheckBox fx:id="storePurposeBusinessPlace" layoutY="66.0" mnemonicParsing="false" text="Store" />
+                                                      <CheckBox fx:id="garagePurposeBusinessPlace" layoutX="74.0" layoutY="66.0" mnemonicParsing="false" text="Garage" />
+                                                      <Label layoutY="92.0" text="Choose your preferred ventilation facility" textFill="#bf3dbd">
+                                                         <font>
+                                                            <Font name="Garamond" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <RadioButton fx:id="standardVentilationBusinessPlace" layoutY="118.0" mnemonicParsing="false" text="Standard" />
+                                                      <RadioButton fx:id="highPoweredFansVentilationBusinessPlace" layoutX="90.0" layoutY="118.0" mnemonicParsing="false" text="High-Powered Fans" />
+                                                      <RadioButton fx:id="airFiltrationVentilationBusinessPlace" layoutX="239.0" layoutY="118.0" mnemonicParsing="false" text="Air Filtration System" />
+                                                      <Label layoutY="145.0" text="Select your power supply needs" textFill="#bf3dbd">
+                                                         <font>
+                                                            <Font name="Garamond" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <CheckBox fx:id="standardPowerSupplyBusinessPlace" layoutY="169.0" mnemonicParsing="false" text="Standard" />
+                                                      <CheckBox fx:id="highVoltagePowerBusinessPlace" layoutX="85.0" layoutY="169.0" mnemonicParsing="false" text="High Voltage" />
+                                                      <CheckBox fx:id="generatorPowerSupplyBusinessPlace" layoutX="203.0" layoutY="169.0" mnemonicParsing="false" text="Backup Generator" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane fx:id="preferredLocationAndCreateButtonPane">
+                                                   <children>
+                                                      <Label layoutX="2.0" layoutY="8.0" text="Enter your preferred location" textFill="#bf3dbd">
+                                                         <font>
+                                                            <Font name="Garamond" size="14.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="renterPreferredLocationField" layoutY="33.0" promptText="Location" />
+                                                      <Button layoutX="161.0" layoutY="32.0" mnemonicParsing="false" onAction="#onRenterAddPreferredLocationClicked" style="-fx-background-color: #571d4f; -fx-background-radius: 8px;" text="Add location" textFill="#ffeafe">
+                                                         <font>
+                                                            <Font name="Garamond Bold" size="13.0" />
+                                                         </font>
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor>
+                                                      </Button>
+                                                      <FlowPane fx:id="renterPreferredLocationFlowPane" hgap="10.0" layoutX="2.0" layoutY="69.0" prefHeight="79.0" prefWidth="400.0" vgap="10.0" />
+                                                      <Button layoutY="187.0" mnemonicParsing="false" onAction="#onCreateRenterProfileClicked" prefHeight="31.0" prefWidth="77.0" style="-fx-background-color: #571d4f; -fx-background-radius: 10px;" text="Create" textFill="#ffeafe">
+                                                         <font>
+                                                            <Font name="Franklin Gothic Demi" size="14.0" />
+                                                         </font>
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor>
+                                                      </Button>
+                                                   </children>
+                                                </Pane>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="30.0" />
+                                       </padding>
+                                    </AnchorPane>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="manageSellerProfile" layoutY="100.0" prefHeight="589.0" prefWidth="800.0" style="-fx-background-color: white;" visible="false">
+                           <children>
+                              <AnchorPane fx:id="createSellerProfile" layoutX="17.0" layoutY="14.0" prefHeight="575.0" prefWidth="766.0">
+                                 <children>
+                                    <Button layoutX="24.0" layoutY="50.0" mnemonicParsing="false" onAction="#onCreateNewSellerProfileClicked" style="-fx-background-color: #571d4f; -fx-background-radius: 8px;" text="Create Seller Profile" textFill="#ffeafe">
+                                       <font>
+                                          <Font name="Franklin Gothic Demi" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Label layoutX="24.0" layoutY="23.0" text="You don't have a seller profile yet." textFill="#aa4dab">
+                                       <font>
+                                          <Font name="Dubai Regular" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="createSellerProfileFields" layoutX="17.0" layoutY="14.0" prefHeight="575.0" prefWidth="766.0" style="-fx-background-color: #fff7ff; -fx-background-radius: 30px;" translateY="575.0" visible="false">
+                                 <children>
+                                    <Label layoutX="43.0" layoutY="31.0" text="Real estate license number" textFill="#bf3dbd">
+                                       <font>
+                                          <Font name="Garamond" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="sellerLicenseNumber" layoutX="43.0" layoutY="52.0" prefHeight="25.0" prefWidth="158.0" promptText="Enter license number" />
+                                    <Label layoutX="43.0" layoutY="91.0" text="Enter your owned property" textFill="#bf3dbd">
+                                       <font>
+                                          <Font name="Garamond" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <CheckBox fx:id="sellerProfileApartmentChecked" layoutX="43.0" layoutY="119.0" mnemonicParsing="false" text="Apartments" textFill="#691f6b" />
+                                    <CheckBox fx:id="sellerProfileHousesChecked" layoutX="186.0" layoutY="119.0" mnemonicParsing="false" text="Houses" textFill="#691f6b" />
+                                    <CheckBox fx:id="sellerProfileLandsChecked" layoutX="337.0" layoutY="119.0" mnemonicParsing="false" text="Lands" textFill="#691f6b" />
+                                    <CheckBox fx:id="sellerProfileResidentialUnitsChecked" layoutX="43.0" layoutY="157.0" mnemonicParsing="false" text="Residential units" textFill="#691f6b" />
+                                    <CheckBox fx:id="sellerProfileCommercialUnitsChecked" layoutX="186.0" layoutY="157.0" mnemonicParsing="false" text="Commercial units" textFill="#691f6b" />
+                                    <CheckBox fx:id="sellerProfileBusinessPlacesChecked" layoutX="337.0" layoutY="157.0" mnemonicParsing="false" text="Business places" textFill="#691f6b" />
+                                    <Button layoutX="43.0" layoutY="424.0" mnemonicParsing="false" onAction="#onCreateSellerProfileClicked" prefHeight="31.0" prefWidth="77.0" style="-fx-background-color: #571d4f; -fx-background-radius: 10px;" text="Create" textFill="#ffeafe">
+                                       <font>
+                                          <Font name="Franklin Gothic Demi" size="14.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <HBox alignment="CENTER" layoutX="663.0" layoutY="27.0" onMouseClicked="#onCancelCreateSellerClicked" prefHeight="31.0" prefWidth="89.0" spacing="5.0">
+                                       <children>
+                                          <Label text="Cancel" textFill="#ac44b2">
+                                             <font>
+                                                <Font name="Georgia Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../images/cross.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </HBox>
+                                    <Label layoutX="43.0" layoutY="193.0" text="Open to communicate with-" textFill="#bf3dbd">
+                                       <font>
+                                          <Font name="Garamond" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <CheckBox fx:id="sellerOpenCommunicationWithBuyer" layoutX="43.0" layoutY="222.0" mnemonicParsing="false" text="Buyer" textFill="#691f6b" />
+                                    <CheckBox fx:id="sellerOpenCommunicationWithRenter" layoutX="136.0" layoutY="222.0" mnemonicParsing="false" text="Renter" textFill="#691f6b" />
+                                    <CheckBox fx:id="sellerOpenCommunicationWithAgent" layoutX="235.0" layoutY="222.0" mnemonicParsing="false" text="Agent" textFill="#691f6b" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.realestatemanagementsystem.homepageController">
+   <children>
+      <AnchorPane stylesheets="@style.css">
+         <children>
+            <AnchorPane layoutY="55.0" prefHeight="639.0" prefWidth="1000.0">
+               <children>
+                  <ImageView fitHeight="500.0" fitWidth="1000.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../../../images/homepage%20background.jpeg" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="350.0" layoutY="50.0" text="Search properties for sale" textFill="#98009e">
+                     <font>
+                        <Font name="Bodoni MT" size="24.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="350.0" layoutY="100.0" prefHeight="200.0" prefWidth="250.0">
+                     <children>
+                        <Button contentDisplay="RIGHT" layoutX="160.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="90.0" style="-fx-background-radius: 30px; -fx-background-color: #571d4f;" textFill="#ffeefe">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/search%20icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets left="35.0" />
+                           </padding>
+                        </Button>
+                        <TextField prefHeight="40.0" prefWidth="200.0" promptText="Search property" style="-fx-background-color: white; -fx-background-radius: 30px;">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </TextField>
+                     </children>
+                  </Pane>
+                  <Button fx:id="menuButton" mnemonicParsing="false" onAction="#onMenuButtonClicked" prefHeight="41.0" prefWidth="88.0" styleClass="menuButton" stylesheets="@style.css" text="Menu" textFill="#571d4f">
+                     <font>
+                        <Font name="Franklin Gothic Demi" size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/menu%20icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <VBox fx:id="forSaleLayer" layoutX="183.0" layoutY="53.0" prefHeight="105.0" prefWidth="163.0" styleClass="primaryOptionLayer" translateY="-105.0">
+               <children>
+                  <Pane onMouseClicked="#onApartmentsSaleClicked" prefHeight="35.0" styleClass="menuItem">
+                     <children>
+                        <VBox fx:id="apartmentsSale" prefHeight="105.0" prefWidth="198.0" styleClass="secondaryOptionLayer" visible="false">
+                           <children>
+                              <Pane prefHeight="35.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="9.0" text="Apartments for sale in Dhaka" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="35.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="9.0" text="Apartments for sale in Chittagong" />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="10.0" layoutY="45.0" prefHeight="35.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="9.0" text="Apartments for sale in Sylhet" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </VBox>
+                        <Label layoutX="14.0" layoutY="9.0" text="Apartments for sale" />
+                     </children>
+                  </Pane>
+                  <Pane onMouseClicked="#onResidentialSaleClicked" prefHeight="35.0" styleClass="menuItem">
+                     <children>
+                        <Label layoutX="14.0" layoutY="9.0" text="Residential plots for sale" />
+                        <VBox fx:id="residentialSale" prefHeight="70.0" prefWidth="129.0" styleClass="secondaryOptionLayer" visible="false">
+                           <children>
+                              <Pane prefHeight="35.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="9.0" text="Lands" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="35.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="9.0" text="Houses and Lands" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="10.0" layoutY="45.0" onMouseClicked="#onCommercialSaleClicked" prefHeight="35.0" styleClass="menuItem">
+                     <children>
+                        <Label layoutX="14.0" layoutY="9.0" text="Commercial units for sale" />
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+            <VBox fx:id="forRentLayer" layoutX="283.0" layoutY="53.0" prefHeight="140.0" prefWidth="159.0" styleClass="primaryOptionLayer" translateY="-140.0">
+               <children>
+                  <Pane onMouseClicked="#onApartmentsRentClicked" prefHeight="35.0" styleClass="menuItem">
+                     <children>
+                        <VBox fx:id="apartmentsRent" prefHeight="105.0" prefWidth="198.0" styleClass="secondaryOptionLayer" visible="false">
+                           <children>
+                              <Pane prefHeight="35.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="9.0" text="Apartments for rent in Dhaka" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="35.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="9.0" text="Apartments for rent in Chittagong" />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="10.0" layoutY="45.0" prefHeight="35.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="9.0" text="Apartments for rent in Sylhet" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </VBox>
+                        <Label layoutX="14.0" layoutY="9.0" text="Apartments for rent" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="10.0" layoutY="10.0" onMouseClicked="#onResidentialRentClicked" prefHeight="35.0" styleClass="menuItem">
+                     <children>
+                        <Label layoutX="14.0" layoutY="6.0" text="Residential plot for rent" />
+                        <VBox fx:id="residentialRent" prefHeight="70.0" prefWidth="129.0" styleClass="secondaryOptionLayer" visible="false">
+                           <children>
+                              <Pane prefHeight="35.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="9.0" text="Lands" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="35.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="9.0" text="Houses and Lands" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="10.0" layoutY="45.0" onMouseClicked="#onCommercialRentClicked" prefHeight="35.0" styleClass="menuItem">
+                     <children>
+                        <Label layoutX="14.0" layoutY="9.0" text="Commercial units for rent" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="10.0" layoutY="80.0" onMouseClicked="#onBusinessRentClicked" prefHeight="35.0" styleClass="menuItem">
+                     <children>
+                        <Label layoutX="14.0" layoutY="9.0" text="Business places for rent" />
+                        <VBox fx:id="businessRent" layoutY="-35.0" prefHeight="70.0" prefWidth="129.0" styleClass="secondaryOptionLayer" visible="false">
+                           <children>
+                              <Pane prefHeight="35.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="9.0" text="Stores" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="35.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="9.0" text="Garages" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+            <VBox fx:id="addPropertyLayer" layoutX="383.0" layoutY="53.0" prefHeight="70.0" prefWidth="100.0" styleClass="primaryOptionLayer" translateY="-70.0">
+               <children>
+                  <Pane prefHeight="35.0" prefWidth="200.0" styleClass="menuItem">
+                     <children>
+                        <Label layoutX="14.0" layoutY="9.0" text="For selling" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="10.0" layoutY="10.0" prefHeight="35.0" prefWidth="200.0" styleClass="menuItem">
+                     <children>
+                        <Label layoutX="14.0" layoutY="9.0" text="For buying" />
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+            <VBox fx:id="newPropertyLayer" layoutX="483.0" layoutY="53.0" prefHeight="105.0" prefWidth="163.0" styleClass="primaryOptionLayer" translateY="-105.0">
+               <children>
+                  <Pane onMouseClicked="#newApartmentSaleClicked" prefHeight="35.0" styleClass="menuItem">
+                     <children>
+                        <VBox fx:id="newApartmentSale" prefHeight="105.0" prefWidth="198.0" styleClass="secondaryOptionLayer" visible="false">
+                           <children>
+                              <Pane prefHeight="35.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="9.0" text="Apartments for sale in Dhaka" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="35.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="9.0" text="Apartments for sale in Chittagong" />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="10.0" layoutY="45.0" prefHeight="35.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="9.0" text="Apartments for sale in Sylhet" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </VBox>
+                        <Label layoutX="14.0" layoutY="9.0" text="Apartments for sale" />
+                     </children>
+                  </Pane>
+                  <Pane onMouseClicked="#newResidentialSaleClicked" prefHeight="35.0" styleClass="menuItem">
+                     <children>
+                        <Label layoutX="14.0" layoutY="9.0" text="Residential plots for sale" />
+                        <VBox fx:id="newResidentialSale" prefHeight="70.0" prefWidth="129.0" styleClass="secondaryOptionLayer" visible="false">
+                           <children>
+                              <Pane prefHeight="35.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="9.0" text="Lands" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="35.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="9.0" text="Houses and Lands" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="10.0" layoutY="45.0" onMouseClicked="#newCommercialSaleClicked" prefHeight="35.0" styleClass="menuItem">
+                     <children>
+                        <Label layoutX="14.0" layoutY="9.0" text="Commercial units for sale" />
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+            <VBox fx:id="findAgentLayer" layoutX="583.0" layoutY="53.0" prefHeight="105.0" prefWidth="100.0" styleClass="primaryOptionLayer" translateY="-105.0">
+               <children>
+                  <Pane prefHeight="35.0" prefWidth="200.0" styleClass="menuItem">
+                     <children>
+                        <Label layoutX="14.0" layoutY="9.0" text="By region" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="10.0" layoutY="10.0" prefHeight="35.0" prefWidth="200.0" styleClass="menuItem">
+                     <children>
+                        <Label layoutX="14.0" layoutY="9.0" text="By country" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="10.0" layoutY="45.0" prefHeight="35.0" prefWidth="200.0" styleClass="menuItem">
+                     <children>
+                        <Label layoutX="14.0" layoutY="9.0" text="By postcode" />
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+            <VBox fx:id="servicesLayer" layoutX="683.0" layoutY="53.0" prefHeight="70.0" prefWidth="100.0" styleClass="primaryOptionLayer" translateY="-70.0">
+               <children>
+                  <Pane onMouseClicked="#onContactUsClicked" prefHeight="35.0" prefWidth="200.0" styleClass="menuItem">
+                     <children>
+                        <Label layoutX="14.0" layoutY="9.0" text="Contact us" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="10.0" layoutY="10.0" onMouseClicked="#onReportClicked" prefHeight="35.0" prefWidth="200.0" styleClass="menuItem">
+                     <children>
+                        <Label layoutX="14.0" layoutY="9.0" text="Report" />
+                        <VBox fx:id="reportLayer" layoutY="-35.0" prefHeight="105.0" prefWidth="100.0" styleClass="secondaryOptionLayer" visible="false">
+                           <children>
+                              <Pane prefHeight="35.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="9.0" text="About a buyer" />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="10.0" layoutY="10.0" prefHeight="35.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="9.0" text="About a renter" />
+                                 </children>
+                              </Pane>
+                              <Pane layoutX="10.0" layoutY="45.0" prefHeight="35.0" prefWidth="200.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="9.0" text="About a seller" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+            <HBox prefHeight="52.0" prefWidth="1000.0" translateZ="2.0">
+               <children>
+                  <Pane prefHeight="52.0" prefWidth="185.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label layoutX="35.0" prefHeight="52.0" prefWidth="153.0" text="Your Property" textFill="#5c1259">
+                           <font>
+                              <Font name="Arial Black" size="18.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="10.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/your%20property%20logo.png" />
+                           </image>
+                        </ImageView>
+                        <Separator layoutX="180.0" layoutY="9.0" maxHeight="-Infinity" orientation="VERTICAL" prefHeight="35.0" prefWidth="0.0" />
+                     </children>
+                  </Pane>
+                  <HBox prefHeight="52.0" prefWidth="600.0" style="-fx-background-color: white;" stylesheets="@style.css">
+                     <children>
+                        <Pane onMouseClicked="#onBuyClicked" prefHeight="52.0" prefWidth="100.0" styleClass="menubar">
+                           <children>
+                              <Label layoutX="40.0" layoutY="18.0" styleClass="menubarLabel" text="Buy" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="10.0" layoutY="10.0" onMouseClicked="#onRentClicked" prefHeight="52.0" prefWidth="100.0" styleClass="menubar">
+                           <children>
+                              <Label layoutX="38.0" layoutY="18.0" styleClass="menubarLabel" text="Rent" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="110.0" layoutY="10.0" onMouseClicked="#onAddClicked" prefHeight="52.0" prefWidth="100.0" styleClass="menubar">
+                           <children>
+                              <Label layoutX="15.0" layoutY="18.0" styleClass="menubarLabel" text="Add property" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="210.0" layoutY="10.0" onMouseClicked="#onNewClicked" prefHeight="52.0" prefWidth="100.0" styleClass="menubar">
+                           <children>
+                              <Label layoutX="14.0" layoutY="18.0" styleClass="menubarLabel" text="New property" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="310.0" layoutY="10.0" onMouseClicked="#onFindAgentClicked" prefHeight="52.0" prefWidth="100.0" styleClass="menubar">
+                           <children>
+                              <Label layoutX="22.0" layoutY="18.0" styleClass="menubarLabel" text="Find agent" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="410.0" layoutY="10.0" onMouseClicked="#onServiceClicked" prefHeight="52.0" prefWidth="100.0" styleClass="menubar">
+                           <children>
+                              <Label layoutX="29.0" layoutY="18.0" styleClass="menubarLabel" text="Services" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </HBox>
+                  <Pane prefHeight="52.0" prefWidth="215.0" style="-fx-background-color: white;">
+                     <children>
+                        <Button fx:id="joinButton" layoutX="59.0" layoutY="9.0" mnemonicParsing="false" onAction="#onJoinClicked" prefHeight="34.0" prefWidth="124.0" style="-fx-background-color: #571d4f; -fx-background-radius: 10px;" text="Join/Register" textFill="#ffeafe">
+                           <font>
+                              <Font name="Franklin Gothic Demi" size="14.0" />
+                           </font>
+                        </Button>
+                        <HBox fx:id="userAccountContainer" alignment="CENTER" layoutX="18.0" layoutY="1.0" prefHeight="50.0" prefWidth="180.0" spacing="5.0" visible="false">
+                           <children>
+                              <Label fx:id="userAccountContainerLabel" onMouseClicked="#userAccountBoxClicked" text="Name" textFill="#9c3fa1">
+                                 <font>
+                                    <Font name="Bodoni MT Bold" size="16.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Label>
+                              <ImageView fx:id="userAccountProfilePicture" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#userAccountBoxClicked" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../images/user.png" />
+                                 </image>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+            <Separator layoutY="52.0" prefWidth="1000.0" />
+            <AnchorPane fx:id="sideMenu" layoutY="53.0" prefHeight="638.0" prefWidth="183.0" translateX="-183.0">
+               <children>
+                  <Pane fx:id="categories" prefHeight="310.0" prefWidth="183.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label layoutX="14.0" layoutY="6.0" text="Categories" textFill="#8714a4">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutY="27.0" prefWidth="183.0" />
+                        <AnchorPane layoutY="30.0" prefHeight="35.0" prefWidth="182.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="9.0" text="Houses" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutY="65.0" prefHeight="35.0" prefWidth="182.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="9.0" text="Apartments" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutY="100.0" prefHeight="35.0" prefWidth="182.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="9.0" text="Lands" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutY="135.0" prefHeight="35.0" prefWidth="182.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="9.0" text="Parkings" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutY="170.0" prefHeight="35.0" prefWidth="182.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="9.0" text="Garages" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutY="205.0" prefHeight="35.0" prefWidth="182.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="9.0" text="Stores" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutY="240.0" prefHeight="35.0" prefWidth="182.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="9.0" text="Residential plots" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutY="275.0" prefHeight="35.0" prefWidth="182.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="9.0" text="Commercial units" />
+                              <Separator layoutY="34.0" prefWidth="182.0" />
+                           </children>
+                        </AnchorPane>
+                        <ImageView fx:id="closeMenu" fitHeight="20.0" fitWidth="20.0" layoutX="149.0" layoutY="4.0" onMouseClicked="#closeSideMenu" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/cross.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane layoutY="310.0" prefHeight="329.0" prefWidth="183.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label layoutX="14.0" layoutY="6.0" text="Filter" textFill="#8714a4">
+                           <font>
+                              <Font name="Bookman Old Style Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
